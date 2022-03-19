@@ -1,38 +1,18 @@
--var title = 'Título Principal'
--var titles = ['título principal', 'Subtítulo 1', 'Subtítulo 2', 'Subtítulo 3']
--var user = 'Catuxa'
-mixin box(image, title, contain) 
-	.caja
-		.caja__imagen: img(src='./images/'+image)
-		.caja__contenido
-			h3 #{title}
-			p #{contain} 
-doctype html 
-html
-	head
-		meta(charset='UFT-8')
-		title='Preprocesadores pug'
-		link(rel='stylesheet', href='css/ejercicio-pug.css')
-	body
-		header
-			h1 PlatziGames
-			if user 
-				a Hola #{user}
-			else
-				a.boton Register
-		section.intro
-			.intro__imagen: img(src='./images/imagen.png')
-			.intro__contenido
-				h2 #{titles[0]}
-				p
-					|	Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					|	Nobis sequi corporis nesciunt sed voluptatem totam eos, 
-					|	incidunt assumenda nulla mollitia ut. 
-					|	Nostrum non nam quas quam aperiam obcaecati.
-					span Nobis sequi corporis nesciunt sed voluptatem totam eos, incidunt assumenda nulla mollitia ut. 
-				a.boton Leer Más
-		main.contenido
-			+box('imagen.png',titles[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
-			+box('imagen.png',titles[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
-			+box('imagen.png',titles[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
-			
+extends ./components/template.pug
+block main-contain
+	section.intro
+		.intro__imagen: img(src='./images/imagen.png')
+		.intro__contenido
+			h2 #{titles[0]}
+			p
+				|	Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				|	Nobis sequi corporis nesciunt sed voluptatem totam eos, 
+				|	incidunt assumenda nulla mollitia ut. 
+				|	Nostrum non nam quas quam aperiam obcaecati.
+				span Nobis sequi corporis nesciunt sed voluptatem totam eos, incidunt assumenda nulla mollitia ut. 
+			a.boton Leer Más
+	main.contenido
+		+box('imagen.png',titles[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+		+box('imagen.png',titles[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+		+box('imagen.png',titles[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+		

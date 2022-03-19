@@ -1,0 +1,10 @@
+-var title = 'Título Principal'
+-var titles = ['título principal', 'Subtítulo 1', 'Subtítulo 2', 'Subtítulo 3']
+-var user = 'Catuxa'
+-var configlinks= ['Acerca', 'noticias', 'contacto']
+mixin box(image, title, contain) 
+	.caja
+		.caja__imagen: img(src='./images/'+image)
+		.caja__contenido
+			h3 #{title}
+			p #{contain} 
