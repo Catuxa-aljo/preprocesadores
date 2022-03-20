@@ -11,8 +11,25 @@ $color-auxiliar: #3f579a;
     color: $color-prmario;
     background-color: $color-claro;
 }
+
+@mixin titulos($font) {
+    @if $font == $fuente-principal {
+        font-family: $fuente-principal
+    } @else {
+        font-family: $fuente-auxiliar;
+        text-transform: uppercase
+    }
+}
+
 @function get-opacity($color, $nivel) {
     @return rgba($color, $nivel);
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+    #{$header} {
+        font-size: $size;
+        margin: 0;
+    }
 }
 
 * {
@@ -21,7 +38,7 @@ $color-auxiliar: #3f579a;
 
 body {
     margin: 0;
-    font-family: $fuente-principal;
+    @include titulos($fuente-principal);
 }
 
 main {
