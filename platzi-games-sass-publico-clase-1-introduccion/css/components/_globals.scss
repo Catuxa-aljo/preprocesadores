@@ -5,6 +5,16 @@ $color-claro: #fff;
 $color-secundario: #8841DA;
 $color-auxiliar: #3f579a;
 
+@mixin caja {
+    border-radius: 20px;
+    box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.50);
+    color: $color-prmario;
+    background-color: $color-claro;
+}
+@function get-opacity($color, $nivel) {
+    @return rgba($color, $nivel);
+}
+
 * {
     box-sizing: border-box;
 }
