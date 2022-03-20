@@ -21,11 +21,13 @@
         left: 0;
         right: 0;
         text-align: center;
-        color: @color-claro;
+        color: @color-claro
+        
     }
     &__categoria {
         font-family: @fuente-auxialiar;
         text-transform: uppercase;
+        color: fade(@color-claro, 50%);
     }
     &__titulo {
         font-family: @fuente-auxialiar;
@@ -49,6 +51,9 @@
         }
         span {
             display: inline-block;
+        }
+        &-titulo {
+            color: fade(@color-claro, 50%); 
         }
     }
 }
