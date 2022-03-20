@@ -17,10 +17,23 @@ box-shadow()
 opacidad(color, nivel)
     alpha(color, nivel)
 
+for header in 3 2 1
+    h{header}
+        font-size: 35px - (5*header)
+        margin: 0
+
+titulos(font)
+    if font == fuente-principal
+        font-family: fuente-principal
+    else
+        font-family: fuente-auxiliar
+        font-weight: 600
+        text-transform: uppercase
+
 * 
     box-sizing: border-box
 
 body
     margin: 0
-    font-family: fuente-principal
     color: color-principal
+    titulos(fuente-principal)
